@@ -1,0 +1,37 @@
+.owner-stat {
+    border: none;
+    border-radius: 16px;
+    background: #fff;
+    padding: 22px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.owner-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0f3e7;
+    color: #198754;
+    font-size: 23px;
+}
+
+.owner-number {
+    font-size: 29px;
+    font-weight: 700;
+    color: #125c38;
+}
+
+.owner-chart {
+    position: relative;
+    height: 300px;
+}
+
+.owner-chart canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+

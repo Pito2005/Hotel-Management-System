@@ -1,0 +1,237 @@
+
+/* PITO HOTEL - STAFF MANAGEMENT */
+
+.sm-page {
+    display: grid;
+    gap: 22px;
+}
+
+.sm-toolbar,
+.sm-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sm-eyebrow {
+    color: #16804b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    margin: 0 0 6px;
+}
+
+.sm-card {
+    background: #fff;
+    border: 1px solid #e4ede6;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 6px 20px rgba(25, 65, 41, .04);
+}
+
+.sm-card-heading {
+    margin-bottom: 22px;
+}
+
+.sm-card-heading h5 {
+    font-weight: 750;
+    color: #20372a;
+}
+
+.sm-count {
+    color: #187549;
+    background: #e8f5ec;
+    border-radius: 30px;
+    padding: 7px 13px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sm-search-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sm-search-row .form-control {
+    flex: 1;
+    min-width: 0;
+}
+
+.sm-table {
+    vertical-align: middle;
+}
+
+.sm-table th {
+    color: #6a7e70;
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+    border-bottom: 1px solid #e2eee6;
+    padding: 13px 12px;
+}
+
+.sm-table td {
+    padding: 13px 12px;
+}
+
+.sm-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.sm-avatar {
+    display: flex;
+    width: 47px;
+    height: 47px;
+    flex: none;
+    border-radius: 12px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.sm-avatar-empty {
+    color: #188553;
+    background: #e5f4eb;
+    font-size: 23px;
+}
+
+.sm-role {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e8f5ec;
+    color: #137b4b;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.sm-manage-button {
+    background: #f0f8f3;
+    color: #137848;
+    border: 1px solid #cce5d4;
+    border-radius: 9px;
+    padding: 8px 13px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.sm-manage-button:hover {
+    background: #dff1e5;
+}
+
+.sm-dialog {
+    padding: 0;
+    border: 0;
+    border-radius: 17px;
+    width: min(710px, calc(100vw - 22px));
+    max-width: none;
+    max-height: min(92dvh, 850px);
+    overflow: hidden;
+    color: #273e2d;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, .22);
+}
+
+.sm-dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.sm-dialog::backdrop {
+    background: rgba(12, 35, 23, .52);
+}
+
+.sm-dialog-header,
+.sm-dialog-footer {
+    padding: 19px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    flex-wrap: wrap;
+}
+
+.sm-dialog-header {
+    border-bottom: 1px solid #e8efea;
+}
+
+.sm-dialog-footer {
+    border-top: 1px solid #e8efea;
+}
+
+.sm-dialog form {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.sm-dialog-body {
+    overflow: auto;
+    padding: 24px;
+}
+
+.sm-dialog label {
+    font-weight: 650;
+    color: #385341;
+    font-size: 13px;
+}
+
+.sm-photo-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sm-photo-preview {
+    width: 75px;
+    height: 75px;
+    flex: none;
+    border-radius: 13px;
+    object-fit: cover;
+    border: 1px solid #dcece0;
+}
+
+.sm-photo-preview[hidden] {
+    display: none;
+}
+
+.sm-note {
+    padding: 11px 13px;
+    border-radius: 10px;
+    background: #edf7f0;
+    color: #397654;
+    font-size: 12px;
+}
+
+.sm-delete-dialog {
+    width: min(480px, calc(100vw - 22px));
+}
+
+@media (max-width: 600px) {
+    .sm-card {
+        padding: 14px;
+    }
+
+    .sm-search-row {
+        flex-wrap: wrap;
+    }
+
+    .sm-search-row .form-control {
+        flex-basis: 100%;
+    }
+
+    .sm-dialog-header,
+    .sm-dialog-footer,
+    .sm-dialog-body {
+        padding: 16px;
+    }
+}

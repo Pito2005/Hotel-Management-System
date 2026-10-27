@@ -1,0 +1,358 @@
+
+/* =========================================
+   PITO HOTEL - ROOM MANAGEMENT
+========================================= */
+
+.rm-page {
+    display: grid;
+    gap: 22px;
+}
+
+.rm-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.rm-eyebrow {
+    color: #198754;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+}
+
+.rm-btn-primary,
+.rm-btn-secondary {
+    padding: 10px 18px;
+    border-radius: 11px;
+    font-weight: 600;
+}
+
+.rm-btn-secondary {
+    background: #e8f5ee;
+    color: #137447;
+    border: 1px solid #c4e7d2;
+}
+
+.rm-btn-secondary:hover {
+    background: #d7efdf;
+    color: #0e5d38;
+}
+
+.rm-card {
+    background: #fff;
+    border: 1px solid #ecf0ed;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 7px 28px rgba(15, 77, 45, .05);
+}
+
+.rm-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.rm-section-header h5 {
+    color: #125c38;
+    font-weight: 750;
+    margin-bottom: 5px;
+}
+
+.rm-section-header p {
+    color: #819087;
+    font-size: 13px;
+    margin: 0;
+}
+
+.rm-count {
+    display: inline-block;
+    white-space: nowrap;
+    background: #e8f6ed;
+    color: #147448;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.rm-table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.rm-table thead th {
+    background: #e3f3e9;
+    color: #145a39;
+    padding: 15px 14px;
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+    border: none;
+}
+
+.rm-table tbody td {
+    padding: 14px;
+    border-color: #edf1ee;
+    vertical-align: middle;
+}
+
+.rm-table tbody tr:hover td {
+    background: #f8fcf9;
+}
+
+.rm-thumbnail,
+.rm-no-image {
+    width: 86px;
+    height: 64px;
+    border-radius: 11px;
+}
+
+.rm-thumbnail {
+    object-fit: cover;
+}
+
+.rm-no-image {
+    background: #e5f5eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #198754;
+    font-size: 24px;
+}
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+.rm-status {
+    display: inline-flex;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.rm-status-available {
+    color: #087749;
+    background: #def7e9;
+}
+
+.rm-status-occupied {
+    color: #9b6200;
+    background: #fff1cc;
+}
+
+.rm-status-maintenance {
+    color: #606b75;
+    background: #edf0f3;
+}
+
+/* =========================================
+   MANAGE BUTTON
+========================================= */
+
+.rm-manage-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 108px;
+    padding: 9px 14px;
+    background: #e6f5eb;
+    border: 1px solid #c4e8d1;
+    border-radius: 10px;
+    color: #117345;
+    font-size: 12px;
+    font-weight: 750;
+    cursor: pointer;
+    transition: background .2s, border-color .2s, transform .2s;
+}
+
+.rm-manage-button:hover {
+    background: #198754;
+    color: #fff;
+    border-color: #198754;
+    transform: translateY(-1px);
+}
+
+.rm-manage-button:focus-visible {
+    outline: 3px solid #9fe1bc;
+    outline-offset: 2px;
+}
+
+/* =========================================
+   POPUP
+========================================= */
+
+.rm-dialog {
+    width: min(690px, calc(100% - 26px));
+    max-height: calc(100dvh - 36px);
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #253c2e;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, .24);
+    overflow-y: auto;
+}
+
+.rm-dialog::backdrop {
+    background: rgba(5, 30, 18, .67);
+}
+
+.rm-dialog-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: white;
+    padding: 20px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid #eaf0ec;
+}
+
+.rm-dialog-header h5 {
+    color: #125c38;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.rm-dialog-body {
+    padding: 25px 26px;
+}
+
+.rm-dialog-body .form-label {
+    font-size: 13px;
+    font-weight: 650;
+    color: #344b3b;
+}
+
+.rm-dialog-body .form-control,
+.rm-dialog-body .form-select {
+    border-radius: 10px;
+    min-height: 43px;
+}
+
+.rm-dialog-body .form-control:focus,
+.rm-dialog-body .form-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, .11);
+}
+
+.rm-auto-price {
+    background: #e8f6ee !important;
+    color: #117345 !important;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: default;
+}
+
+.rm-photo-preview {
+    display: block;
+    max-width: 100%;
+    width: 220px;
+    height: 145px;
+    border: 2px solid #e0efe6;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.rm-photo-preview[hidden],
+.rm-danger-button[hidden] {
+    display: none !important;
+}
+
+.rm-dialog-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 17px 26px;
+    background: #fff;
+    border-top: 1px solid #eaf0ec;
+}
+
+.rm-dialog-footer .btn {
+    border-radius: 10px;
+    font-weight: 650;
+    padding: 9px 16px;
+}
+
+.rm-danger-button {
+    background: #fff0f0;
+    border: 1px solid #ffd2d2;
+    color: #ce3434;
+}
+
+.rm-danger-button:hover {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.rm-type-dialog {
+    width: min(540px, calc(100% - 26px));
+}
+
+.rm-delete-dialog {
+    width: min(440px, calc(100% - 26px));
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+    .rm-card {
+        padding: 16px;
+    }
+
+    .rm-thumbnail,
+    .rm-no-image {
+        width: 65px;
+        height: 52px;
+    }
+
+    .rm-dialog-header,
+    .rm-dialog-body,
+    .rm-dialog-footer {
+        padding: 16px;
+    }
+
+    .rm-dialog-footer .btn {
+        font-size: 12px;
+    }
+}
+
+
+/* PITO HOTEL - Automatic Booked Status */
+
+.rm-status-booked {
+    display: inline-block;
+    background: #fff1d6;
+    color: #925c00;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+

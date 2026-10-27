@@ -1,0 +1,586 @@
+
+/* =========================================
+   PITO HOTEL - RESERVATION MANAGEMENT
+========================================= */
+
+.rv-page {
+    display: grid;
+    gap: 22px;
+}
+
+.rv-toolbar,
+.rv-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.rv-header-actions,
+.rv-footer-tools,
+.rv-action-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.rv-eyebrow {
+    margin-bottom: 5px;
+    color: #198754;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.rv-toolbar .btn {
+    padding: 10px 17px;
+    border-radius: 11px;
+    font-weight: 650;
+}
+
+.rv-btn-soft {
+    color: #117345;
+    background: #e8f5ee;
+    border: 1px solid #c4e7d2;
+    border-radius: 10px;
+    font-weight: 650;
+}
+
+.rv-btn-soft:hover {
+    background: #198754;
+    border-color: #198754;
+    color: #fff;
+}
+
+.rv-card {
+    background: #fff;
+    padding: 24px;
+    border: 1px solid #ecf0ed;
+    border-radius: 18px;
+    box-shadow: 0 7px 28px rgba(15, 77, 45, .05);
+}
+
+.rv-card-heading {
+    margin-bottom: 22px;
+}
+
+.rv-card-heading h5 {
+    margin-bottom: 5px;
+    color: #125c38;
+    font-weight: 750;
+}
+
+.rv-card-heading p {
+    margin-bottom: 0;
+    color: #819087;
+    font-size: 13px;
+}
+
+.rv-count {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #e8f6ed;
+    color: #147448;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.rv-guest-search {
+    flex: 1;
+    min-width: 190px;
+    max-width: 400px;
+}
+
+/* =========================================
+   TABLE STYLING
+========================================= */
+
+.rv-table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.rv-table thead th {
+    padding: 15px 13px;
+    color: #145a39;
+    background: #e3f3e9;
+    border: none;
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.rv-table tbody td {
+    padding: 14px 13px;
+    border-color: #edf1ee;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.rv-table tbody tr:hover td {
+    background: #f8fcf9;
+}
+
+.rv-stay {
+    min-width: 180px;
+    line-height: 1.6;
+}
+
+.rv-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.rv-status-confirmed,
+.rv-status-paid {
+    color: #087749;
+    background: #def7e9;
+}
+
+.rv-status-checked_out {
+    color: #1559a1;
+    background: #e0efff;
+}
+
+.rv-status-cancelled {
+    color: #b43131;
+    background: #ffeded;
+}
+
+.rv-status-unpaid {
+    color: #986000;
+    background: #fff1ce;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.rv-action-group {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.rv-manage-button,
+.rv-print-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 13px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        color .2s,
+        background .2s,
+        border-color .2s,
+        transform .2s;
+}
+
+.rv-manage-button {
+    color: #117345;
+    background: #e6f5eb;
+    border: 1px solid #c4e8d1;
+}
+
+.rv-manage-button:hover {
+    color: #fff;
+    background: #198754;
+    border-color: #198754;
+    transform: translateY(-1px);
+}
+
+.rv-print-button {
+    color: #306548;
+    background: #fff;
+    border: 1px solid #d6e2dc;
+}
+
+.rv-print-button:hover {
+    color: #137447;
+    background: #ecf8f1;
+    border-color: #198754;
+    transform: translateY(-1px);
+}
+
+.rv-manage-button:focus-visible,
+.rv-print-button:focus-visible {
+    outline: 3px solid #9fe1bc;
+    outline-offset: 2px;
+}
+
+/* =========================================
+   DIALOG / POPUP
+========================================= */
+
+.rv-dialog {
+    width: min(690px, calc(100% - 26px));
+    max-height: calc(100dvh - 32px);
+    padding: 0;
+    color: #253c2e;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, .24);
+    overflow-y: auto;
+}
+
+.rv-dialog::backdrop {
+    background: rgba(5, 30, 18, .67);
+}
+
+.rv-dialog-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 20px 26px;
+    background: #fff;
+    border-bottom: 1px solid #eaf0ec;
+}
+
+.rv-dialog-header h5 {
+    color: #125c38;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.rv-dialog-body {
+    padding: 25px 26px;
+}
+
+.rv-dialog-body .form-label {
+    color: #344b3b;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.rv-dialog-body .form-control,
+.rv-dialog-body .form-select {
+    min-height: 43px;
+    border-radius: 10px;
+}
+
+.rv-dialog-body .form-control:focus,
+.rv-dialog-body .form-select:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25, 135, 84, .11);
+}
+
+.rv-dialog-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 17px 26px;
+    background: #fff;
+    border-top: 1px solid #eaf0ec;
+}
+
+.rv-dialog-footer .btn {
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.rv-small-dialog {
+    width: min(580px, calc(100% - 26px));
+}
+
+.rv-delete-dialog {
+    width: min(440px, calc(100% - 26px));
+}
+
+.rv-danger-button {
+    color: #ce3434;
+    background: #fff0f0;
+    border: 1px solid #ffd2d2;
+}
+
+.rv-danger-button:hover {
+    color: #fff;
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+.rv-danger-button[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   ESTIMATED PRICE & BOOKING SUMMARY
+========================================= */
+
+.rv-price-preview,
+.rv-booking-summary {
+    padding: 18px;
+    background: #eaf7ef;
+    border: 1px solid #d1eadb;
+    border-radius: 12px;
+}
+
+.rv-price-preview span {
+    display: block;
+    color: #587265;
+    font-size: 12px;
+}
+
+.rv-price-preview strong {
+    display: block;
+    margin: 4px 0;
+    color: #147448;
+    font-size: 27px;
+}
+
+.rv-price-preview small {
+    color: #738d7e;
+}
+
+.rv-summary-total {
+    margin-top: 9px;
+    color: #198754;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.rv-info-note {
+    padding: 12px;
+    color: #89631b;
+    background: #fff7e4;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   PRINT RECEIPT PREVIEW DIALOG
+========================================= */
+
+.rv-receipt-dialog {
+    width: min(960px, calc(100% - 24px));
+    height: min(92dvh, 1000px);
+    max-height: calc(100dvh - 24px);
+    overflow: hidden;
+}
+
+.rv-receipt-dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.rv-receipt-dialog .rv-dialog-header,
+.rv-receipt-dialog .rv-dialog-footer {
+    flex-shrink: 0;
+}
+
+.rv-receipt-body {
+    flex: 1;
+    min-height: 0;
+    padding: 15px;
+    background: #edf2ef;
+}
+
+.rv-receipt-body iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #dfe7e2;
+    border-radius: 8px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+    .rv-card {
+        padding: 16px;
+    }
+
+    .rv-dialog-header,
+    .rv-dialog-body,
+    .rv-dialog-footer {
+        padding: 16px;
+    }
+
+    .rv-receipt-dialog {
+        width: calc(100% - 12px);
+        height: calc(100dvh - 12px);
+        max-height: calc(100dvh - 12px);
+    }
+
+    .rv-receipt-body {
+        padding: 7px;
+    }
+
+    .rv-footer-tools {
+        width: 100%;
+    }
+
+    .rv-action-group {
+        gap: 6px;
+    }
+
+    .rv-manage-button,
+    .rv-print-button {
+        padding: 8px 10px;
+    }
+}
+
+/* =====================================
+   PITO HOTEL - A4 RECEIPT PREVIEW
+===================================== */
+
+.rv-receipt-dialog {
+    width: min(1050px, calc(100vw - 24px));
+    height: 94dvh;
+    max-height: 94dvh;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.rv-receipt-dialog[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.rv-receipt-dialog .rv-dialog-header,
+.rv-receipt-dialog .rv-dialog-footer {
+    flex-shrink: 0;
+}
+
+/* Scrollable A4 Preview Area */
+.rv-receipt-body {
+    flex: 1;
+    min-height: 0;
+    padding: 24px;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #e8eeea;
+}
+
+/* Exact A4 Portrait Ratio at CSS print scale */
+.rv-receipt-body iframe {
+    display: block;
+    flex: none;
+    width: 794px;
+    height: 1123px;
+    max-width: none;
+    min-height: 1123px;
+    border: none;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile screen */
+@media (max-width: 850px) {
+    .rv-receipt-body {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .rv-receipt-dialog {
+        width: calc(100vw - 12px);
+        height: 96dvh;
+        max-height: 96dvh;
+    }
+}
+
+/* PITO_PAGINATION_CSS_V1 */
+
+.rv-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-top: 16px;
+    border-top: 1px solid #e4eee8;
+}
+
+.rv-pagination-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.rv-pagination-links .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+}
+
+.rv-pagination-links .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 6px 10px;
+    border: 1px solid #dce9e1;
+    border-radius: 9px !important;
+    background: white;
+    color: #106b45;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rv-pagination-links .page-item.active .page-link {
+    background: #128653;
+    border-color: #128653;
+    color: white;
+}
+
+.rv-pagination-links .page-item:not(.active):not(.disabled)
+.page-link:hover {
+    background: #e7f6ed;
+    border-color: #128653;
+}
+
+.rv-pagination-links .page-item.disabled .page-link {
+    background: #f7faf8;
+    color: #9aa9a0;
+}
+
+@media (max-width: 768px) {
+    .rv-pagination {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rv-pagination-info {
+        text-align: center;
+    }
+
+    .rv-pagination-links .pagination {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,165 @@
+
+/* PITO HOTEL - A4 REVENUE PDF */
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: DejaVu Sans, sans-serif;
+    color: #253c2e;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* MAIN PRINT AREA: creates actual inner spacing */
+.revenue-print-page {
+    width: auto;
+    margin: 0;
+    padding: 18mm 18mm 20mm 18mm;
+}
+
+/* General tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    vertical-align: middle;
+}
+
+/* Top green border */
+.top-line {
+    height: 5px;
+    background: #198754;
+    margin-bottom: 22px;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header td {
+    padding: 4px 6px;
+}
+
+.header td:first-child {
+    padding-left: 0;
+}
+
+.header td:last-child {
+    padding-right: 0;
+    text-align: right;
+}
+
+/* Hotel branding */
+.hotel-logo {
+    width: 55px;
+    max-width: 55px;
+    max-height: 55px;
+    height: auto;
+}
+
+.hotel-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #125c38;
+}
+
+.report-title {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: right;
+    color: #125c38;
+}
+
+.muted {
+    color: #748479;
+    font-size: 10px;
+}
+
+/* Report period */
+.period {
+    background: #e6f5eb;
+    padding: 16px 18px;
+    margin: 20px 0;
+    line-height: 1.7;
+}
+
+/* Revenue summary */
+.summary {
+    background: #f1f9f4;
+    padding: 18px;
+    margin: 18px 0 22px;
+}
+
+.big-total {
+    font-size: 27px;
+    font-weight: bold;
+    color: #198754;
+}
+
+/* Section headings */
+.section-title {
+    margin: 24px 0 12px;
+    padding-bottom: 5px;
+    color: #125c38;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Report tables */
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 20px;
+}
+
+.report-table th {
+    background: #125c38;
+    color: #fff;
+    padding: 12px 13px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.report-table td {
+    padding: 12px 13px;
+    border-bottom: 1px solid #dfebe3;
+    font-size: 10px;
+}
+
+.report-table thead {
+    display: table-header-group;
+}
+
+.report-table tr {
+    page-break-inside: avoid;
+}
+
+.right {
+    text-align: right !important;
+}
+
+/* Footer */
+.footer {
+    margin-top: 28px;
+    padding-top: 14px;
+    border-top: 1px solid #dce8e0;
+    color: #748479;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

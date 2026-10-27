@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #eef5f0;
+    font-family: Arial, sans-serif;
+    color: #193b28;
+}
+
+/* =====================================
+   MAIN AUTH PAGE
+===================================== */
+
+.auth-page {
+    min-height: 100vh;
+    padding: 28px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 1150px;
+    min-height: 715px;
+    display: grid;
+    grid-template-columns: 52% 48%;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 65px rgba(20,65,39,0.11);
+}
+
+/* =====================================
+   LEFT SIDE
+===================================== */
+
+.auth-left {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 38px 65px 28px;
+    background: #fff;
+}
+
+/* HOTEL LOGO AND NAME */
+.hotel-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.brand-logo-fallback {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #198754;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    color: #125c38;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.brand-subtitle {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #8a9b90;
+    margin-top: 4px;
+}
+
+/* LOGIN / REGISTER FORM CONTAINER */
+.auth-form-area {
+    width: 100%;
+    max-width: 410px;
+    margin: auto;
+    padding: 34px 0;
+}
+
+/* INPUT FIELDS */
+.auth-form-area .form-label {
+    color: #344b3c;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.auth-form-area .form-control {
+    min-height: 48px;
+    background: #fafcfb;
+    border: 1px solid #dae8df;
+    border-radius: 10px;
+    color: #193b28;
+}
+
+.auth-form-area .form-control:focus {
+    border-color: #198754;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(25,135,84,0.12);
+}
+
+.auth-form-area .form-check-input:checked {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-green {
+    background: #198754;
+    color: white;
+    border: 1px solid #198754;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.btn-green:hover {
+    background: #12683f;
+    color: white;
+}
+
+/* COPYRIGHT FOOTER */
+.auth-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: #93a398;
+    margin-top: auto;
+}
+
+/* =====================================
+   RIGHT SIDE - LOGIN BACKGROUND
+===================================== */
+
+.auth-right {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 52px;
+    background: linear-gradient(
+        135deg,
+        #0c3b29,
+        #198754
+    );
+    color: white;
+    isolation: isolate;
+}
+
+/* DYNAMIC BACKGROUND IMAGE */
+.auth-right-photo {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* DARK GRADIENT FOR TEXT READABILITY */
+.auth-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,25,15,0.08),
+        rgba(0,35,20,0.78)
+    );
+}
+
+/* GRAPHIC WHEN THERE IS NO PHOTO */
+.hero-art {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.hero-art i {
+    font-size: 105px;
+    color: rgba(255,255,255,0.92);
+}
+
+/* RIGHT PANEL CONTENT */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(5px);
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+.hero-heading {
+    font-size: clamp(30px, 3.2vw, 45px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero-description {
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 370px;
+}
+
+.hero-divider {
+    width: 68px;
+    height: 4px;
+    background: #a7f3c1;
+    border-radius: 4px;
+    margin-top: 26px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media(max-width: 950px) {
+
+    .auth-left {
+        padding: 35px 38px 26px;
+    }
+
+    .auth-right {
+        padding: 35px;
+    }
+}
+
+@media(max-width: 760px) {
+
+    .auth-page {
+        padding: 14px;
+    }
+
+    .auth-container {
+        display: block;
+        max-width: 520px;
+        min-height: auto;
+        border-radius: 18px;
+    }
+
+    .auth-left {
+        min-height: 620px;
+        padding: 30px 25px;
+    }
+
+    .auth-form-area {
+        padding: 38px 0;
+    }
+
+    .auth-right {
+        display: none;
+    }
+
+    .auth-footer {
+        font-size: 10px;
+    }
+}
+
+
+
+/* ==========================================
+   PITO HOTEL - LOGIN FIT SCREEN
+========================================== */
+
+@media (min-width: 761px) and (min-height: 700px) {
+
+    body.login-screen {
+        margin: 0;
+        min-height: 0;
+    }
+
+    .login-screen .auth-page {
+        height: 100vh;
+        height: 100dvh;
+        min-height: 0;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-screen .auth-container {
+        height: 100%;
+        min-height: 0;
+        max-height: 100%;
+        max-width: 1150px;
+    }
+
+    .login-screen .auth-left {
+        min-height: 0;
+        padding: 16px 34px 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login-screen .hotel-brand {
+        flex-shrink: 0;
+    }
+
+    .login-screen .auth-form-area {
+        width: 100%;
+        max-width: 410px;
+        flex: 1;
+        min-height: 0;
+        margin: 0 auto;
+        padding: 8px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-screen .auth-footer {
+        flex-shrink: 0;
+        margin-top: 8px;
+    }
+
+    .login-screen .auth-right {
+        min-height: 0;
+        padding: 32px;
+    }
+
+    .login-screen .hero-badge {
+        margin-bottom: 12px;
+    }
+
+    .login-screen .hero-heading {
+        margin-bottom: 12px;
+    }
+
+    .login-screen .hero-description {
+        line-height: 1.5;
+    }
+
+    .login-screen .hero-divider {
+        margin-top: 12px;
+    }
+}
+
+/* Allow scrolling only when the screen is too small */
+@media (max-width: 760px), (max-height: 699px) {
+
+    .login-screen .auth-page {
+        height: auto;
+        min-height: 100dvh;
+    }
+
+    .login-screen .auth-container {
+        height: auto;
+    }
+}
+
+

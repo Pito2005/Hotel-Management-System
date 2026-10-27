@@ -1,0 +1,132 @@
+.setting-card {
+    border: none;
+    border-radius: 18px;
+    background: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.setting-section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #125c38;
+}
+
+.setting-section-title i {
+    margin-right: 10px;
+}
+
+.setting-description {
+    color: #7e8d82;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.setting-label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #293d30;
+}
+
+.setting-label i {
+    color: #198754;
+    margin-right: 5px;
+}
+
+.setting-card .form-control {
+    border-radius: 9px;
+    padding: 11px 13px;
+}
+
+.setting-card .form-control:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 3px rgba(25,135,84,0.1);
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 2px solid #dceee2;
+}
+
+.profile-fallback {
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    background: #e0f3e7;
+    color: #198754;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.hotel-logo-preview {
+    width: 130px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 13px;
+    padding: 12px;
+    border: 1px solid #dceee2;
+    background: #f6fbf7;
+}
+
+.image-fallback {
+    background: #e0f3e7;
+    color: #198754;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    border-radius: 13px;
+}
+
+.background-preview {
+    width: 100%;
+    max-width: 460px;
+    height: 240px;
+    object-fit: cover;
+    border: 1px solid #dceee2;
+    border-radius: 15px;
+    display: block;
+}
+
+.background-placeholder {
+    width: 100%;
+    max-width: 460px;
+    height: 240px;
+    background: linear-gradient(135deg, #125c38, #198754);
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+}
+
+.setting-hint {
+    color: #829088;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.setting-divider {
+    margin: 30px 0;
+    border-color: #e0eae4;
+}
+
+.setting-save {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .setting-card {
+        padding: 18px;
+    }
+}
